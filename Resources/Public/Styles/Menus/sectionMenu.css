@@ -1,6 +1,6 @@
 .hmbrgr {
     position: relative;
-    float: right;
+    float: left;
     box-sizing: border-box;
     margin-right: -.95em;
     transition: all .4s;

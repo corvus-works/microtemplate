@@ -153,8 +153,8 @@ tbody tr:last-child th, tbody tr:last-child td {
     text-transform: uppercase;
     color: #fff;
     padding: .6em 1.7em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     transition: all .4s ease;
     border: 2px solid;
     margin-right: .4em;
@@ -164,6 +164,60 @@ tbody tr:last-child th, tbody tr:last-child td {
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+.linkYellowGreen {
+    color: #DBAC34 !important;
+}
+.linkYellowGreen:hover {
+    color: #2E9390 !important;
+}
+
+.full-text {
+    display: none; /* Initially hide the full text */
+}
+  
+.expand-link a,
+.collapse-link a {
+    text-decoration: none; /* Remove default link underline */
+    color: #2E9390 !important; /* Style the link color */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.expand-link a:hover,
+.collapse-link a:hover {
+    color: #DBAC34 !important;
+}
+
+.mapLink {
+    font-weight: normal !important;
+    text-decoration: none;
+}
+
+.mapLink:hover {
+    color: #dbac34;
+    text-decoration: none;
+}
+
+.contactLink {
+    font-weight: normal !important;
+}
+
+.contactLink:hover {
+    color: #dbac34;
+    text-decoration: none;
+}
+
+.extraMarginHor {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.headerBtnDiv {
+    padding: 0;
+    z-index: 9999;
+    position: absolute;
+    top: -120px;
 }
 
 .align-center .btn {
@@ -189,7 +243,7 @@ tbody tr:last-child th, tbody tr:last-child td {
 .contentWidth {
     margin: auto;
     clear: both;
-    padding: 0 3em;
+    padding: 0;
     position: relative;
     z-index: 1;
 }
@@ -287,12 +341,142 @@ tbody tr:last-child th, tbody tr:last-child td {
 }
 
 .ce-bodytext a {
-    font-weight: bold;
+    font-weight: regular;
+}
+
+.ce-bodytext a:hover {
+    color: #dbac34;
+    text-decoration: none;
 }
 
 .ce-bodytext .blueText {
     color: #000e9b;
     font-weight: 100;
+}
+
+.cw-bullets {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  
+.cw-bullets li {
+    padding-left: 20px;
+    background-image: url('/fileadmin/resources/pics/Icon_pfeil_rechts_gold.png');
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    background-size: 15px 15px; /* Fixed size for the background image */
+}
+
+.ce-bodytext .yellowText {
+    color: transparent; /* Make the text transparent */
+    background-image: linear-gradient(to right, #dbac34, #ffdd4c); /* Left to right gradient */
+    background-clip: text;
+    -webkit-background-clip: text; /* For older Safari versions */
+}
+
+.ce-bodytext .text16 {
+    font-size: 16px;
+}
+
+.ce-bodytext .no-margin {
+    line-height: 1.1;
+}
+
+.ce-bodytext .bulletText {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    background-image: url('/fileadmin/resources/pics/icons/Icon_pfeil_rechts_weiss.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 1em 1em; /* Adjust size as needed */
+}
+
+.ce-bodytext .bulletTextDown {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    background-image: url('/fileadmin/resources/pics/icons/Icon_pfeil_runter_weiss.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 1em 1em; /* Adjust size as needed */
+}
+
+.aspect-button {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    border: none;
+    padding: 0;
+    overflow: hidden; /* Prevent image overflow */
+    text-decoration: none; /* Remove default link styling */
+    color: black; /* Set text color */
+    font-family: sans-serif; /* Example font */
+    background-color: #000528;
+}
+
+.aspect-button:hover {
+    background-color: #003E49; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    text-decoration: none; /* Prevent text underline on hover */
+}
+
+.aspect-button img {
+    max-width: 50%; /* Adjust image size */
+    max-height: 60%; /* Adjust image size */
+    object-fit: contain; /* Prevent image distortion */
+    margin-top: 10%; /* Add some space at the top */
+}
+
+.aspect-button span {
+    margin-top: 5px; /* Space between image and text */
+    text-align: center;
+    flex-grow: 1; /* Allow text to expand to fill available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #ffffff;
+    text-decoration: none; /* Prevent text underline on hover */
+}
+
+.aspect-button span:hover {
+    text-decoration: none;
+}
+
+.aspect-button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%); /* Center the line */
+    width: 15%; /* Set your desired fixed width */
+    height: 2%;   /* Set your desired line thickness */
+    background-color: #ECC33F;
+}
+
+.hoverContainer::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%); /* Center the line */
+    width: 15%; /* Set your desired fixed width */
+    height: 2%;   /* Set your desired line thickness */
+    background-color: #ECC33F;
+}
+
+.inner-contact {
+    padding-left: 20% !important;
+}
+
+.ce-bodytext .twoColumns {
+    column-count: 2;
+    column-gap: 2em;
 }
 
 .ce-gallery {
@@ -317,6 +501,10 @@ tbody tr:last-child th, tbody tr:last-child td {
     width: 100%;
     height: auto;
     max-width: 100%;
+}
+
+.ce-textpic {
+    overflow: visible !important;
 }
 
 .ce-textpic.ce-above .ce-gallery {
@@ -437,6 +625,11 @@ ul.ce-uploads li .ce-uploads-filesize {
     -ms-transform: rotate(90deg);
 }
 
+.smallFont {
+	font-size: 0.8em;
+	line-height: 1em;
+}
+
 /* responsive layout */
 @media screen and (min-device-width: 2560px) and (min-width: 1700px) {
     html {
@@ -450,6 +643,16 @@ ul.ce-uploads li .ce-uploads-filesize {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .c-section {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    .inner-contact {
+        padding-left: 20% !important;
+    }
+}
+
 @media screen and (max-width: 960px) {
     html {
         font-size: 16px;
@@ -460,9 +663,9 @@ ul.ce-uploads li .ce-uploads-filesize {
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 840px) {
     h2 {
-        font-size: 1.5em;
+        font-size: 2.0em !important;
     }
 
     input, select, textarea {
@@ -472,7 +675,34 @@ ul.ce-uploads li .ce-uploads-filesize {
     form>.row {
         width: 100%;
         margin-left: 0;
-        marrgin-right: 0;
+        margin-right: 0;
+    }
+
+    .headerBtnDiv {
+        position: relative;
+        top: 0;
+    }
+
+    .spacerClass {
+        height: auto !important;
+    }
+
+    .no-padding-right {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    .no-padding-left {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    .contactImage {
+        width: auto;
+        height: auto;
+
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -483,5 +713,10 @@ ul.ce-uploads li .ce-uploads-filesize {
 
     .no-br-on-mobile br {
         display: none;
+    }
+
+    .c-section {
+        padding-left: 1% !important;
+        padding-right: 1% !important;
     }
 }

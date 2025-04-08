@@ -16,7 +16,20 @@ editor:
       - { name: "Button", element: "a", attributes: { class: "btn"} }
       - { name: "With header font", element: "span", attributes: { class: "headerFont"} }
       - { name: "Blue text", element: "span", attributes: { class: "blueText"} }
+      - { name: "Yellow text", element: "span", attributes: { class: "yellowText"} }
+      - { name: "16px text", element: "span", attributes: { class: "text16"} }
+      - { name: "no-margin", element: "span", attributes: { class: "no-margin"} }
+      - { name: "bulletText", element: "span", attributes: { class: "bulletText"} }
+      - { name: "bulletTextDown", element: "span", attributes: { class: "bulletTextDown"} }
+      - { name: "short-text", element: "span", attributes: { class: "short-text"} }
+      - { name: "full-text", element: "p", attributes: { class: "full-text"} }
+      - { name: "expand-link", element: "span", attributes: { class: "expand-link"} }
+      - { name: "collapse-link", element: "span", attributes: { class: "collapse-link"} }
+      - { name: "expandable-text", element: "div", attributes: { class: "expandable-text"} }
+      - { name: "linkYellowGreen", element: "a", attributes: { class: "linkYellowGreen"} }
+      - { name: "twoColumns", element: "div", attributes: { class: "twoColumns"} }
       - { name: "No line breaks on mobile", element: "span", attributes: { class: "no-br-on-mobile"} }
+      - { name: "CW Bullets", element: "ul", attributes: { class: "cw-bullets"} }
 
     format_tags: "p;h1;h2;h3;h4;h5;pre"
 

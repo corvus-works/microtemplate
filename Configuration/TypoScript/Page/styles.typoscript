@@ -69,6 +69,31 @@
 					h1,h2,h3,h4,.ce-bodytext .headerFont,  .form-group>label, .control-label, #menu nav, .c-accordion-title {font-family: {$microtemplate.header-font-family}, {$microtemplate.main-font-family}}
 					#header.scrolled, #header.force-bg {background-color: {$microtemplate.header-bg}}
 
+					h1 {
+						text-align: left;
+            font-size: 60px;
+						-webkit-hyphens: none; /* For Safari and older Chrome versions */
+						-moz-hyphens: none;    /* For Firefox */
+						hyphens: none;         /* Standard property */
+					}
+
+					h2 {
+						position: relative;
+						text-align: left;
+						font-size: 40px;
+						margin-top: 1px;
+					}
+					h2::after {
+						content: '';
+						display: block;
+						width: 150px;
+						height: 4px;
+						background: linear-gradient(to right, #dbac34, #ffdd4c);
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+
 				/* page containers */
 					.pageWidth {max-width: {$microtemplate.pageWidth}}
 					.contentWidth {max-width: {$microtemplate.contentWidth}}
@@ -78,13 +103,13 @@
 					#menu a {color: {$microtemplate.text-default}}
 					#menu>nav>ul>li, #languagemenu>nav>ul {border-color: {$microtemplate.text-default}}
 					.hmbrgr i {background: {$microtemplate.text-default}}
-					a, a:visited, #menu a:hover, #menu .active a {color: {$microtemplate.accentColor}}
+					a, a:visited, #menu a:hover, #menu .active a {color: {$microtemplate.text-default}}
 					.btn:visited, .btn, .closelink:hover i, a.hmbrgr:hover i {background-color: {$microtemplate.accentColor}}
 					.btn:visited, .btn, .btn:disabled {border-color: {$microtemplate.accentColor}}
 					.btn:hover, .btn:disabled {color: {$microtemplate.accentColor}}
 
 				/* content sections */
-					.c-section {background-color: {$microtemplate.containerSection.bg-default} !important}
+					.c-section {background-color: {$microtemplate.containerSection.bg-default} !important; padding-left: 20%; padding-right: 20%}
 					.c-section.bg-light {background-color: {$microtemplate.containerSection.bg-light} !important}
 					.c-section.bg-dark {background-color: {$microtemplate.containerSection.bg-dark} !important; color: {$microtemplate.text-light}}
 					.c-section.text-light {color: {$microtemplate.text-light}}
@@ -92,6 +117,35 @@
 					.c-section .videobuttons svg .a, .c-section .videobuttons svg .st0, .c-section .videobuttons svg rect {fill:{$microtemplate.text-default}}
 					.c-section.text-light .videobuttons  .a, .c-section.text-light .videobuttons polygon.st0, .c-section.text-light .videobuttons rect {fill:{$microtemplate.text-light}}
 					.c-section.text-dark .videobuttons  .a, .c-section.text-dark .videobuttons polygon.st0, .c-section.text-dark .videobuttons rect {fill:{$microtemplate.text-dark}}
+					.c-section.spacerClass {height: 0.5em; position: relative;}
+					.c-section.overflowing {position: absolute; z-index: 100; overflow: visible;}
+					.c-section.no-padding {padding: 0 !important; margin: 0 important;}
+					.c-section.no-padding-right {padding-right: 0; margin-right: 0 important; padding-left: 8%;}
+					.c-section.no-padding-left {padding-left: 0; margin-left: 0 important; padding-right: 8%;}
+					.c-section.right-contact {padding-right: 0 !important; margin-right: 0 important; padding-top: 0 !important; margin-top: 0 important; padding-bottom: 0 !important; margin-bottom: 0 important; padding-left: 2% !important; margin-left: 2% important;}
+					.c-section.no-vert-padding {padding-top: 0; padding-bottom: 0; background-color: transparent !important;}
+					.c-section.hoverContPic {padding-top: 0; padding-bottom: 0; padding-left: 20%; padding-right: 20%; background-color: transparent !important;}
+					.c-section.transparentContainer {background-color: transparent !important; padding: 2% !important; margin: 0 !important;}
+					.c-section.subheadercontainer {background-color: #2e787b !important; padding-top: 15%;}
+          			.c-section.hoverContainer {
+						z-index: 110;
+						padding-top: 2%;
+						padding-bottom: 2%;
+						padding-left: 2%;
+						padding-right: 2%;
+						/*min-height: 280px;*/
+						aspect-ratio: 1 / 1;
+						max-width: 350px;
+					}
+					.c-section.hoverContainer:hover {
+						background-color: #003E49 !important;
+						cursor: pointer;
+					}
+					.c-section.welcomePage {
+						padding-left: 6% !important;
+						padding-right: 6% !important;
+						padding-bottom: 10%;
+					}
 
 				/* accordion */
 					.c-accordion-title, .c-accordion-title:visited {color: {$microtemplate.text-default}}

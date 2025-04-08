@@ -12,6 +12,31 @@ page.jsInline {
       const logo = document.getElementById('logo');
       const menu = document.getElementById('menu');
       const hmbrgr = document.getElementById('hmbrgr');
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const expandableTexts = document.querySelectorAll('.expandable-text');
+
+        expandableTexts.forEach(container => {
+          const shortTextSpan = container.querySelector('p > .short-text');
+          const fullTextContainer = container.querySelector('.full-text'); // The <p> containing the full text span
+          const expandLink = container.querySelector('.expand-link a');
+          const collapseLink = container.querySelector('.collapse-link a');
+
+          if (shortTextSpan && fullTextContainer && expandLink && collapseLink) {
+            expandLink.addEventListener('click', function(event) {
+              event.preventDefault();
+              shortTextSpan.style.display = 'none';
+              fullTextContainer.style.display = 'block';
+            });
+
+            collapseLink.addEventListener('click', function(event) {
+              event.preventDefault();
+              fullTextContainer.style.display = 'none';
+              shortTextSpan.style.display = 'inline';
+            });
+          }
+        });
+      });
     )
 }
 # load jQuery

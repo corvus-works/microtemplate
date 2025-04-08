@@ -12,7 +12,7 @@
   					#menu a {color: {$microtemplate.darkMode-text-default}}
   					#menu>nav>ul>li, #languagemenu>nav>ul {border-color: {$microtemplate.darkMode-text-default}}
   					.hmbrgr i {background: {$microtemplate.darkMode-text-default}}
-  					a, a:visited, #menu a:hover, #menu .active a {color: {$microtemplate.darkMode-accentColor}}
+  					a, a:visited, #menu a:hover, #menu .active a {color: {$microtemplate.darkMode-text-default}}
   					.btn:visited, .btn, .closelink:hover i, a.hmbrgr:hover i {background-color: {$microtemplate.darkMode-accentColor}}
   					.btn:visited, .btn, .btn:disabled {border-color: {$microtemplate.darkMode-accentColor}}
   					.btn:hover, .btn:disabled {color: {$microtemplate.darkMode-accentColor}}
